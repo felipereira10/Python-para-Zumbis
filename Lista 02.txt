@@ -1,0 +1,95 @@
+Exercício 01
+
+a = int(input('Lado a: '))
+b = int(input('Lado b: '))
+c = int(input('Lado c: '))
+if a > b + c or b > a + c or c > a + b:
+  print ('Não pode ser um triângulo')
+  print ('Um dos lados é maior que a soma dos outros')
+elif a == b == c: #a == b and b == c and a == c
+  print ('Equilátero')
+elif a == b or b == c or a == c:
+  print ('Isósceles')
+else:
+  print ('Escaleno')
+
+_________________________________________
+Exercício 02
+
+ano = int(input('Digite o ano: '))
+if ano % 4 == 0 and (ano % 100 != 0 or ano % 400 == 0):
+  print ('Bissexto')
+else:
+  print ('Não é bissexto')
+________________________________________
+Exercício 03
+
+peso = float(input('Digite o peso: '))
+if peso>50:
+    excesso = peso-50
+    multa = excesso*4
+else:
+    multa = excesso=0
+
+print (f'multa de R$ {multa:.2f}')
+print (f'Excesso: {excesso:.2f}kg')
+_________________________________________
+Exercício 04
+
+n1 = float(input('Digite o 1º: '))
+n2 = float(input('Digite o 2°: '))
+n3 = float(input('Digite o 3°: '))
+
+if n1>=n2 and n1>=n3:
+    print('1º número é maior ->',n1)
+elif n2>=n1 and n2>=n3:
+    print('2º número é maior ->',n2)
+elif n3>=n1 and n3>=n2:
+    print('3º número é maior ->',n3)
+__________________________________________
+Exercício 05
+
+n1 = float(input('Digite o 1°: '))
+n2 = float(input('Digite o 2°: '))
+n3 = float(input('Digite o 3°: '))
+
+if n1>=n2 and n1>=n3:
+    print('1° número é maior ->',n1)
+elif n2>=n1 and n2>=n3:
+    print('2° número é maior ->',n2)
+elif n3>n1 and n3>n2:
+    print('3° número é maior ->',n3)
+    
+if n1<=n2 and n1<=n3:
+    print('1° é menor ->',n1)
+elif n2<=n1 and n2<=n3:
+    print('2° é menor ->',n2)
+else:
+    print ('3° é menor ->',n3)
+______________________________________________
+Exercício 06
+
+valor = float(input('Quanto você ganha por hora: '))
+horas = float(input("Quantas horas trabalha: "))
+bruto = valor * horas
+ir = bruto * 0.11
+inss = bruto * 0.08
+sindicato = bruto * 0.05
+liquido = bruto - ir - inss - sindicato
+print (f'*Salário Bruto:\t\t R$ {bruto:.2f}*')
+print (f'-IR:\t\t\t R$ {ir:.2f}')
+print (f'-INSS:\t\t\t R$ {inss:.2f}')
+print (f'-Sindicato:\t\t R$ {sindicato:.2f}')
+print (f'=Salário Líquido:\t R$ {liquido:.2f}')
+_____________________________________________________-
+Exercício 07
+
+m = int(input('Metros a ser Pintado: '))
+if m % 54 == 0:
+  latas = m / 54
+else:
+  latas = int(m / 54) + 1
+
+valor = latas * 80
+print (f'{latas} latas')
+print (f'Total: R$ {valor:.2f}')

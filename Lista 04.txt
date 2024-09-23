@@ -1,0 +1,83 @@
+EX 1
+
+import random
+lista = random.sample(range(101),10)
+min = 100
+max = 0
+for x in lista:
+    if x <= min:
+            min = x
+    if x >= max:
+            max = x
+print(f'Valor máximo é {max} e Valor mínimo é {min}')
+print(lista)
+__________________________________________________________
+EX 02
+
+import random
+lista = random.sample(range(101),20)
+pares = []
+impares = []
+for x in lista:
+    if x % 2 == 0:
+            pares.append(x)
+    if x % 2 != 0:
+            impares.append(x)
+print(f'os números pares são: {pares}')
+print(f'os números impares são: {impares}')
+___________________________________________________
+EX 03
+
+from random import sample
+vetor1 = sample(range(100), 10)
+vetor2 = sample(range(100), 10)
+vetor3 = []
+
+for x in zip(vetor1, vetor2):
+  vetor3.extend(list(x))
+print('vetor 1:', vetor1)
+print('vetor 2:', vetor2)
+print('vetor 3:', vetor3)
+_________________________________________
+EX 04
+
+texto = '''The Python Software Foundation and the global Python
+community welcome and encou
+rage participation by everyone. Our community is based on
+mutual respect, tolerance, and encouragement, and we are working to help each other live up
+to these principles. We want our community to be more diverse: whoever you are, and
+whatever your backgrou
+nd, we welcome you.'''.lower()
+
+import string
+for c in string.punctuation:
+    text = texto.replace(c,' ')
+resp = [p for p in texto.split()
+        if p[0] in 'python' or p[-1] in 'python']
+print (resp)
+__________________________________________________________
+EX 05
+
+import string
+for c in string.punctuation:
+  texto = texto.replace(c, ' ')
+
+def pitônica(palavra):
+  for letra in palavra:
+    if letra in 'python':
+      return True
+  return False
+
+resp = []
+for p in texto.split():
+  if pitônica(p) and len(p) > 4:
+    resp.append(p)
+    
+print (resp)
+print (len(resp))
+
+
+
+
+
+

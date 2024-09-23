@@ -1,0 +1,49 @@
+EX 01
+
+n = int(input(" Informe uma nota entre 0 e 10: " ))
+while n < 0 or n > 10:
+    print("Informe uma nota válida: ")
+    n = int(input(" Informe uma nota entre 0 e 10: " ))
+print("Obrigado.")
+__________________________________________________________
+EX 02   
+
+n = input('informe user: ')
+s = input ('informe senha: ')
+while n == s:
+    print ('Usuer não pode ser igual a senha')
+    n = input('informe user: ')
+    s = input ('informe senha: ')
+print('Correto e cadastrado')
+____________________________________________________
+EX 03
+
+a = 80000
+b = 200000
+anos = 0
+while b > a:
+    anos = anos + 1
+    a = a * 1.03
+    b = b * 1.015
+print (f'{anos}')
+_______________________________________________________
+EX 04
+
+n = int(input('Digite o valor de n: '))
+
+a, b = 1, 1
+k = 1
+
+while k <= n-2:
+    a, b = b, a + b
+    k = k + 1
+
+print (b)
+_____________________________________________________________
+EX 05
+
+a = int(input('Valor de a: '))
+b = int(input('Valor de b: '))
+while a % b != 0:
+    a, b = b, a%b
+print (f'mdc = {b}')
